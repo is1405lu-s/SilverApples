@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverApples", "ConsoleApp2\SilverApples.csproj", "{D8032FE5-21EA-408E-939A-3BB03B6DBF17}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SilverApplesERP", "SilverApplesERP\", "{C3901C71-2F29-4175-B7B6-E42715224258}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56789"
+		Debug.AspNetCompiler.PhysicalPath = "SilverApplesERP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56789\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56789"
+		Release.AspNetCompiler.PhysicalPath = "SilverApplesERP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56789\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56789"
+		SlnRelativePath = "SilverApplesERP\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverApplesConsole2", "SilverApplesWebServiceConsole\SilverApplesConsole2.csproj", "{E849CAB3-4040-4B42-A76C-DD28C079F603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverApplesConsole1", "SilverApplesConsole\SilverApplesConsole1.csproj", "{ADEE5537-E908-45A1-BD66-A88177030D0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8032FE5-21EA-408E-939A-3BB03B6DBF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8032FE5-21EA-408E-939A-3BB03B6DBF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8032FE5-21EA-408E-939A-3BB03B6DBF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8032FE5-21EA-408E-939A-3BB03B6DBF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3901C71-2F29-4175-B7B6-E42715224258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3901C71-2F29-4175-B7B6-E42715224258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3901C71-2F29-4175-B7B6-E42715224258}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3901C71-2F29-4175-B7B6-E42715224258}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E849CAB3-4040-4B42-A76C-DD28C079F603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E849CAB3-4040-4B42-A76C-DD28C079F603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E849CAB3-4040-4B42-A76C-DD28C079F603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E849CAB3-4040-4B42-A76C-DD28C079F603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEE5537-E908-45A1-BD66-A88177030D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEE5537-E908-45A1-BD66-A88177030D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEE5537-E908-45A1-BD66-A88177030D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEE5537-E908-45A1-BD66-A88177030D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A9C5427-2216-4385-9605-CFD2B3698E2E}
+	EndGlobalSection
+EndGlobal

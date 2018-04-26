@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://silverapples.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://silverapples.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt; SilverApples webbtjänster &lt;/b&gt;</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://silverapples.com/">
+      <s:element name="GetEmployees">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEmplTables">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmplTablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmplTablesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllInfoResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetaDataColumnName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tablename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaDataColumnNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaDataColumnNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllKeys">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllKeysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllKeysResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllIndexes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllIndexesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllIndexesResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllTableConstraints">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllTableConstraintsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllTableConstraintsResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllTablesOne">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllTablesOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllTablesOneResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllTablesTwo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllTablesTwoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllTablesTwoResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllEmployeeColumnsOne">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeColumnsOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeColumnsOneResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllEmployeeColumnsTwo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeColumnsTwoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeColumnsTwoResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmplRelatives">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmplRelativesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmplRelativesResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSick2004">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSick2004Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSick2004Result" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstNameTopSick">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFirstNameTopSickResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFirstNameTopSickResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateEmplContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateEmplContractResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmplContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmplContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmplContractResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmplContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmplContractResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteEmplContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEmplContractResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cPnr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomersResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEmployeesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployees" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmplTables" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmplTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataColumnNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaDataColumnName" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataColumnNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaDataColumnNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllKeysSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllKeys" />
+  </wsdl:message>
+  <wsdl:message name="GetAllKeysSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllIndexesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllIndexes" />
+  </wsdl:message>
+  <wsdl:message name="GetAllIndexesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllIndexesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTableConstraintsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllTableConstraints" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTableConstraintsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllTableConstraintsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTablesOneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllTablesOne" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTablesOneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllTablesOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTablesTwoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllTablesTwo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTablesTwoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllTablesTwoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeColumnsOneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeColumnsOne" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeColumnsOneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeColumnsOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeColumnsTwoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeColumnsTwo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeColumnsTwoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeColumnsTwoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplRelativesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmplRelatives" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplRelativesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmplRelativesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSick2004SoapIn">
+    <wsdl:part name="parameters" element="tns:GetSick2004" />
+  </wsdl:message>
+  <wsdl:message name="GetSick2004SoapOut">
+    <wsdl:part name="parameters" element="tns:GetSick2004Response" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNameTopSickSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirstNameTopSick" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstNameTopSickSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirstNameTopSickResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateEmplContractSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateEmplContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateEmplContractSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateEmplContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplContractSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmplContract" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplContractSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmplContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmplContractSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEmplContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmplContractSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEmplContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmplContractSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEmplContract" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmplContractSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEmplContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapIn">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomers" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ControllerSoap">
+    <wsdl:operation name="GetEmployees">
+      <wsdl:input message="tns:GetEmployeesSoapIn" />
+      <wsdl:output message="tns:GetEmployeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplTables">
+      <wsdl:input message="tns:GetEmplTablesSoapIn" />
+      <wsdl:output message="tns:GetEmplTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInfo">
+      <wsdl:input message="tns:GetAllInfoSoapIn" />
+      <wsdl:output message="tns:GetAllInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaDataColumnName">
+      <wsdl:input message="tns:GetMetaDataColumnNameSoapIn" />
+      <wsdl:output message="tns:GetMetaDataColumnNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKeys">
+      <wsdl:input message="tns:GetAllKeysSoapIn" />
+      <wsdl:output message="tns:GetAllKeysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllIndexes">
+      <wsdl:input message="tns:GetAllIndexesSoapIn" />
+      <wsdl:output message="tns:GetAllIndexesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTableConstraints">
+      <wsdl:input message="tns:GetAllTableConstraintsSoapIn" />
+      <wsdl:output message="tns:GetAllTableConstraintsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTablesOne">
+      <wsdl:input message="tns:GetAllTablesOneSoapIn" />
+      <wsdl:output message="tns:GetAllTablesOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTablesTwo">
+      <wsdl:input message="tns:GetAllTablesTwoSoapIn" />
+      <wsdl:output message="tns:GetAllTablesTwoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeColumnsOne">
+      <wsdl:input message="tns:GetAllEmployeeColumnsOneSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeColumnsOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeColumnsTwo">
+      <wsdl:input message="tns:GetAllEmployeeColumnsTwoSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeColumnsTwoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplRelatives">
+      <wsdl:input message="tns:GetEmplRelativesSoapIn" />
+      <wsdl:output message="tns:GetEmplRelativesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSick2004">
+      <wsdl:input message="tns:GetSick2004SoapIn" />
+      <wsdl:output message="tns:GetSick2004SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNameTopSick">
+      <wsdl:input message="tns:GetFirstNameTopSickSoapIn" />
+      <wsdl:output message="tns:GetFirstNameTopSickSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmplContract">
+      <wsdl:input message="tns:CreateEmplContractSoapIn" />
+      <wsdl:output message="tns:CreateEmplContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplContract">
+      <wsdl:input message="tns:GetEmplContractSoapIn" />
+      <wsdl:output message="tns:GetEmplContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmplContract">
+      <wsdl:input message="tns:UpdateEmplContractSoapIn" />
+      <wsdl:output message="tns:UpdateEmplContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmplContract">
+      <wsdl:input message="tns:DeleteEmplContractSoapIn" />
+      <wsdl:output message="tns:DeleteEmplContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchSoapIn" />
+      <wsdl:output message="tns:SearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input message="tns:GetCustomerSoapIn" />
+      <wsdl:output message="tns:GetCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <wsdl:input message="tns:GetCustomersSoapIn" />
+      <wsdl:output message="tns:GetCustomersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ControllerSoap" type="tns:ControllerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployees">
+      <soap:operation soapAction="http://silverapples.com/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplTables">
+      <soap:operation soapAction="http://silverapples.com/GetEmplTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInfo">
+      <soap:operation soapAction="http://silverapples.com/GetAllInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaDataColumnName">
+      <soap:operation soapAction="http://silverapples.com/GetMetaDataColumnName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKeys">
+      <soap:operation soapAction="http://silverapples.com/GetAllKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllIndexes">
+      <soap:operation soapAction="http://silverapples.com/GetAllIndexes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTableConstraints">
+      <soap:operation soapAction="http://silverapples.com/GetAllTableConstraints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTablesOne">
+      <soap:operation soapAction="http://silverapples.com/GetAllTablesOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTablesTwo">
+      <soap:operation soapAction="http://silverapples.com/GetAllTablesTwo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeColumnsOne">
+      <soap:operation soapAction="http://silverapples.com/GetAllEmployeeColumnsOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeColumnsTwo">
+      <soap:operation soapAction="http://silverapples.com/GetAllEmployeeColumnsTwo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplRelatives">
+      <soap:operation soapAction="http://silverapples.com/GetEmplRelatives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSick2004">
+      <soap:operation soapAction="http://silverapples.com/GetSick2004" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNameTopSick">
+      <soap:operation soapAction="http://silverapples.com/GetFirstNameTopSick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmplContract">
+      <soap:operation soapAction="http://silverapples.com/CreateEmplContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplContract">
+      <soap:operation soapAction="http://silverapples.com/GetEmplContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmplContract">
+      <soap:operation soapAction="http://silverapples.com/UpdateEmplContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmplContract">
+      <soap:operation soapAction="http://silverapples.com/DeleteEmplContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://silverapples.com/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://silverapples.com/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <soap:operation soapAction="http://silverapples.com/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ControllerSoap12" type="tns:ControllerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployees">
+      <soap12:operation soapAction="http://silverapples.com/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplTables">
+      <soap12:operation soapAction="http://silverapples.com/GetEmplTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInfo">
+      <soap12:operation soapAction="http://silverapples.com/GetAllInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaDataColumnName">
+      <soap12:operation soapAction="http://silverapples.com/GetMetaDataColumnName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKeys">
+      <soap12:operation soapAction="http://silverapples.com/GetAllKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllIndexes">
+      <soap12:operation soapAction="http://silverapples.com/GetAllIndexes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTableConstraints">
+      <soap12:operation soapAction="http://silverapples.com/GetAllTableConstraints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTablesOne">
+      <soap12:operation soapAction="http://silverapples.com/GetAllTablesOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTablesTwo">
+      <soap12:operation soapAction="http://silverapples.com/GetAllTablesTwo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeColumnsOne">
+      <soap12:operation soapAction="http://silverapples.com/GetAllEmployeeColumnsOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeColumnsTwo">
+      <soap12:operation soapAction="http://silverapples.com/GetAllEmployeeColumnsTwo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplRelatives">
+      <soap12:operation soapAction="http://silverapples.com/GetEmplRelatives" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSick2004">
+      <soap12:operation soapAction="http://silverapples.com/GetSick2004" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstNameTopSick">
+      <soap12:operation soapAction="http://silverapples.com/GetFirstNameTopSick" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmplContract">
+      <soap12:operation soapAction="http://silverapples.com/CreateEmplContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmplContract">
+      <soap12:operation soapAction="http://silverapples.com/GetEmplContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmplContract">
+      <soap12:operation soapAction="http://silverapples.com/UpdateEmplContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmplContract">
+      <soap12:operation soapAction="http://silverapples.com/DeleteEmplContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap12:operation soapAction="http://silverapples.com/Search" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap12:operation soapAction="http://silverapples.com/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <soap12:operation soapAction="http://silverapples.com/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Controller">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt; SilverApples webbtjänster &lt;/b&gt;</wsdl:documentation>
+    <wsdl:port name="ControllerSoap" binding="tns:ControllerSoap">
+      <soap:address location="http://localhost:56789/Controller.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ControllerSoap12" binding="tns:ControllerSoap12">
+      <soap12:address location="http://localhost:56789/Controller.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

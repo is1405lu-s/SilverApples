@@ -1,0 +1,8 @@
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\obj\Debug\SilverApplesConsole.csprojResolveAssemblyReference.cache
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\obj\Debug\SilverApplesConsole.csproj.CoreCompileInputs.cache
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\bin\Debug\SilverApplesConsole.exe
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\bin\Debug\SilverApplesConsole.pdb
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\bin\Debug\Microsoft.Office.Interop.Word.dll
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\bin\Debug\stdole.dll
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\obj\Debug\SilverApplesConsole.exe
+C:\Users\isabe\source\repos\SilverApples\SilverApplesConsole\obj\Debug\SilverApplesConsole.pdb

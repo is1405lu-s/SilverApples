@@ -1,0 +1,7 @@
+C:\Users\isabe\source\repos\SilverApples\SilverApplesWebServiceConsole\bin\Debug\SilverApplesWebServiceConsole.exe.config
+C:\Users\isabe\source\repos\SilverApples\SilverApplesWebServiceConsole\bin\Debug\SilverApplesWebServiceConsole.exe
+C:\Users\isabe\source\repos\SilverApples\SilverApplesWebServiceConsole\bin\Debug\SilverApplesWebServiceConsole.pdb
+C:\Users\isabe\source\repos\SilverApples\SilverApplesWebServiceConsole\obj\Debug\SilverApplesWebServiceConsole.csprojResolveAssemblyReference.cache
+C:\Users\isabe\source\repos\SilverApples\SilverApplesWebServiceConsole\obj\Debug\SilverApplesWebServiceConsole.csproj.CoreCompileInputs.cache
+C:\Users\isabe\source\repos\SilverApples\SilverApplesWebServiceConsole\obj\Debug\SilverApplesWebServiceConsole.exe
+C:\Users\isabe\source\repos\SilverApples\SilverApplesWebServiceConsole\obj\Debug\SilverApplesWebServiceConsole.pdb
